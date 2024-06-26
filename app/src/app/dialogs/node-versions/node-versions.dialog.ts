@@ -55,7 +55,9 @@ export class NodeVersionsDialogComponent {
     private store: Store<AppStore>,
     private dialogRef: MatDialogRef<NodeVersionsDialogComponent>,
     private router: Router
-  ) {}
+  ) {
+    console.log('AppComponent');
+  }
 
   onUploadError(errorMessage: any) {
     this.store.dispatch(new SnackbarErrorAction(errorMessage));
@@ -73,6 +75,7 @@ export class NodeVersionsDialogComponent {
   }
 
   refresh(node: Node) {
+    console.log('AppComponent');
     this.refreshEvent.emit(node);
   }
 

@@ -80,6 +80,7 @@ export class AppComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit() {
+    console.log('AppComponent');
     this.alfrescoApiService.getInstance().on('error', (error: { status: number; response: any }) => {
       if (error.status === 401 && !this.alfrescoApiService.isExcludedErrorListener(error?.response?.req?.url)) {
         if (!this.authenticationService.isLoggedIn()) {
