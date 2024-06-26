@@ -63,7 +63,7 @@ export class FavoriteLibrariesComponent extends PageComponent implements OnInit 
 
   ngOnInit() {
     super.ngOnInit();
-
+    console.log('AppComponent');
     this.getList({ maxItems: this.preferences.paginationSize });
 
     this.subscriptions = this.subscriptions.concat([

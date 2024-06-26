@@ -50,6 +50,7 @@ export class CustomNameColumnComponent extends NameColumnComponent implements On
 
   ngOnInit() {
     this.updateValue();
+    console.log('AppComponent');
 
     this.apiService.nodeUpdated.pipe(takeUntil(this.onDestroy$$)).subscribe((node: any) => {
       const row = this.context.row;

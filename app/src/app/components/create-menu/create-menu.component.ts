@@ -50,6 +50,9 @@ export class CreateMenuComponent implements OnInit, OnDestroy {
   constructor(private extensions: AppExtensionService) {}
 
   ngOnInit() {
+
+    console.log('AppComponent');
+
     this.extensions
       .getCreateActions()
       .pipe(takeUntil(this.onDestroy$))
