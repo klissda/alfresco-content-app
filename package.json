@@ -21,7 +21,8 @@
     "e2e.typecheck": "tsc -p ./e2e/tsconfig.e2e.typecheck.json",
     "e2e": "npm run update-webdriver && protractor $SUITE",
     "spellcheck": "cspell '{src,e2e,projects}/**/*.ts'",
-    "inspect.bundle": "ng build content-ce --prod --stats-json && npx webpack-bundle-analyzer dist/content-ce/stats.json"
+    "inspect.bundle": "ng build content-ce --prod --stats-json && npx webpack-bundle-analyzer dist/content-ce/stats.json",
+    "version": "auto-changelog -p && git add CHANGELOG.md"
   },
   "private": true,
   "dependencies": {
@@ -80,6 +81,7 @@
     "@typescript-eslint/parser": "4.3.0",
     "adf-tslint-rules": "0.0.7",
     "ajv-cli": "^4.2.0",
+    "auto-changelog": "^2.4.0",
     "browser-sync": "^2.27.7",
     "chalk": "^5.0.0",
     "codelyzer": "^6.0.1",
